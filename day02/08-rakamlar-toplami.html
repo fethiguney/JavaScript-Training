@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        let number=123;
+        let sum=0;
+
+        sum+=number%10;
+        number=number/10;
+        sum+=number%10;
+        number=number/10;
+        sum+=number%10;
+        console.log("Sum = " + sum);
+        console.log(Math.floor(sum));
+        console.log(Math.ceil(sum));
+
+
+    </script>
+</body>
+</html>
