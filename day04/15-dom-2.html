@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+
+
+    <input type="text" id="name" value="John">
+    <input type="text" id="message">
+    
+
+    <input type="text" id="data" style="margin:2rem;">
+
+    <button class="submit" onclick="showData()">Submit</button>
+
+    <p class="input"></p>
+
+    <script>
+
+        function showData(){
+            let data=document.querySelector("#data");
+            let dataText=data.value;
+            document.querySelector(".input").innerHTML=`${dataText}`;
+
+        }
+
+        let name = document.querySelector("#name");
+
+        let nameText=name.value;
+
+        let message = document.querySelector("#message");
+
+        message.value=`Welcome ${nameText}`;
+
+      
+
+        
+
+
+     
+
+
+
+    </script>
+    
+</body>
+</html>

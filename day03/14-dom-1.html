@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document Object Model</title>
-</head>
-<body>
+    <style>
+        .strong{
+            font-weight: 700;
+        }
+      </style>
+  </head>
+  
+  <body>
+    <h1 class="title" style="color: blue; text-align: center" ;>
+      Welcome To DOM
+    </h1>
 
-    <h1 class="title" style="color: blue; text-align: center";>Welcome To DOM</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nobis
+      commodi nisi, quod culpa fugit iure quibusdam, provident id, voluptatibus
+      et necessitatibus quisquam odio. Vel sequi doloribus quod quia magni!
+    </p>
 
     <script>
+      let titleEl = document.querySelector(".title");
 
-        let titleEl= document.querySelector(".title");
+      titleEl1 = titleEl.style.color = "red";
+      console.log(titleEl);
 
+      //titleEl=titleEl.innerText="Welcoomeeeeee";
+      console.log(titleEl);
 
-        //titleEl=titleEl.style="color: red";
-        console.log(titleEl);
+      titleEl2 = titleEl.innerHTML = "Holaaaa";
 
-        //titleEl=titleEl.innerText="Welcoomeeeeee";
-        console.log(titleEl);
+      let p =document.querySelector("p");
+      p.classList.add("strong");
+      p.classList.remove("strong");
 
-        titleEl=titleEl.innerHTML="Holaaaa";
-
-
+      console.dir(document.fonts);
 
 
     </script>
-    
-</body>
+  </body>
 </html>
