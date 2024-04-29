@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount app</title>
+</head>
+<body>
+
+    <h2>Discount app</h2>
+
+    <label for="price">Price</label>
+    <div>
+    <input type="number" id="price" aria-label="price">
+    <button id="calculate" onclick="calculate()">Calculate</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function calculate(){
+            let price=document.querySelector("#price").value;
+            let result=document.querySelector("#result");
+
+            if(price>500){
+                price =price*0.9;
+            }else{
+                price=price*0.95;
+            }
+            result.innerHTML=`Final price : ${price}`;
+            price.value="";
+       
+           
+        }
+    </script>
+    
+</body>
+</html>
