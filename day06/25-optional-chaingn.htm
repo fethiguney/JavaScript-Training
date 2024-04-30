@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+
+    <h2>Optional Chaining</h2>
+
+    <h3 id="name"></h3>
+    <h3 id="age"></h3>
+    <h3 id="adress"></h3>
+
+    <script>
+
+        let user={
+            name: "John",
+            age: 30,
+            address: {
+                city: "London",
+                country: "UK"
+            }
+        }
+
+        document.querySelector("#name").innerHTML=user?.name;
+        document.querySelector("#age").innerHTML=user?.age;
+        document.querySelector("#adress").innerHTML=user?.address?.city;
+
+
+
+    </script>
+    
+</body>
+</html>
