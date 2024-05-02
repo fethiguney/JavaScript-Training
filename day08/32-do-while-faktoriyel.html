@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .error {
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Do While Faktoriyel</h2>
+
+    <input type="number" id="num" />
+    <button onclick="calculate()">Hesapla</button>
+    <div class="result"></div>
+
+    <script>
+      function calculate() {
+        let num = Number(document.querySelector("#num").value);
+        //Number() input boş olduğunda 0, string olduğunda ise NaN döndürür
+
+        let faktoriyel = 1;
+        var temp = num;
+
+        if (temp > 0 && Number.isInteger(temp)) {
+          do {
+            faktoriyel *= temp;
+            temp--;
+          } while (temp > 0);
+
+          document.querySelector(
+            ".result"
+          ).innerHTML = `${num} sayısının faktoriyeli: ${faktoriyel}`;
+        } else {
+          document.querySelector(".result").innerHTML =
+            "Lütfen pozitif bir sayı giriniz";
+          
+        }
+
+       
+      }
+    </script>
+  </body>
+</html>

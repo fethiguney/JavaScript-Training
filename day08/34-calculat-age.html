@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator</title>
+</head>
+<body>
+
+    <h2>Calculate Age</h2>
+
+    <input type="number" onchange="calculateAge(this.value)" placeholder="Enter your date of birth" id="date">
+
+
+    <script>
+
+        function calculateAge(birthDate){
+            //let dateOfBirth=document.querySelector("#date").value;
+            //let birthDate=event.target.value;
+            let year=new Date().getFullYear();
+          
+            document.write( `Age of user is ${year-birthDate} years`);
+        }
+
+
+    </script>
+    
+</body>
+</html>
