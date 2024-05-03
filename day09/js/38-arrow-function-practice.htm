@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function Practice</title>
+    <style>
+      input {
+        margin: 6px 0 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Arrow Function Practice</h2>
+
+    <div>
+      <div>
+        <label for="price">Price</label>
+      </div>
+      <input type="number" id="price" />
+    </div>
+    <div>
+      <div>
+        <label for="number">Tax</label>
+      </div>
+      <input type="number" id="tax" />
+    </div>
+    <div>
+      <div>
+        <label for="discount">Discount</label>
+      </div>
+      <input type="number" id="discount" />
+    </div>
+    <button onclick="showLastPrice()">Hesapla</button>
+
+    <div id="result"></div>
+
+
+    <script>
+
+        const calculate = (price, tax, discount) => {
+            if (price > 1500) discount +=10;
+            if (discount <=0) tax=0;
+
+            let totalTax=price * tax/100;
+            let totalDiscount=price * discount/100;
+            let total=price + totalTax - totalDiscount;
+
+            return total;
+           
+        }
+
+        const showLastPrice = () =>{
+            let priceInputValue = Number(document.querySelector("#price").value);
+            let taxInputValue = Number(document.querySelector("#tax").value);
+            let discountInputValue = Number(document.querySelector("#discount").value);
+
+            let result = calculate(priceInputValue, taxInputValue, discountInputValue);
+            document.querySelector("#result").innerHTML = `Son fiyat : ${result} TL`;
+        }
+
+
+    </script>
+
+
+
+
+
+  </body>
+</html>

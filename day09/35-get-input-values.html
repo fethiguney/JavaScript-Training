@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Input Values</title>
+    <style>
+        input{
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div>
+        Input 1 : <input type="text" id="input1" onchange="showValue(this.value)">
+    </div>
+    <div>
+        Input 2 : <input type="text" id="input2" onchange="showValue(this.value)">
+    </div>
+    <div>
+        Input 3 : <input type="text" id="input3" onchange="showValue(this.value)">
+    </div>
+
+    <script>
+      /*   function showValue(order){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let input3 = document.getElementById("input3").value;
+           
+            if(order == 1){
+                alert(`Input 1 : ${input1}`);
+            }else if(order == 2){
+                alert(`Input 2 : ${input2}`);
+            }else if(order == 3){
+                alert(`Input 3 : ${input3}`);
+            } 
+
+        }*/
+
+
+            /* function showValue(){
+
+                alert(event.target.value);
+            }   
+ */
+            function showValue(num){
+                alert(num);
+            }
+            
+
+    </script>
+    
+</body>
+</html>
