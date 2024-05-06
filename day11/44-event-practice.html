@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+    <style>
+        input, button{
+        margin:10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Event Practice</h2>
+
+    <div>
+        <input type="number" id="vize" placeholder="Vize Notu Giriniz">
+    </div>
+    <div>
+        <input type="number" id="final" placeholder="Final Notu Giriniz">
+    </div>
+    <div>
+        <button id="btn">Hesapla</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        document.querySelector("#btn").addEventListener("click", ()=>{
+
+            let vize = document.querySelector("#vize").value;
+            let final = document.querySelector("#final").value;
+
+            if (!isNoteValid(vize) || !isNoteValid(final)){
+                document.querySelector("#result").innerHTML = "Lütfen 0-100 arasında not giriniz";
+                document.querySelector("#vize").value="";
+                document.querySelector("#final").value="";
+                return;
+            }
+           
+            let avarage = calculateAvarage(vize, final);
+            let letterGrade= convertToLetter(avarage);
+
+            document.querySelector("#result").innerHTML = `Ortalama : ${avarage} Harf Notu: ${letterGrade}`;
+            document.querySelector("#vize").value="";
+            document.querySelector("#final").value="";
+        })
+
+        const calculateAvarage = (vize, final) =>{
+            return (vize*0.4+final*0.6).toFixed(2);
+        }
+
+        const convertToLetter = (avg) => {
+            let letter;
+            switch(true){
+                case (avg >= 90):
+                    letter = "A";
+                    break;
+                case (avg >= 80):
+                    letter = "B";
+                    break;
+                case (avg >= 70):
+                    letter = "C";
+                    break;
+                case (avg >= 50):
+                    letter = "D";
+                    break;
+                default:
+                    letter = "F";
+                    break;
+
+            }
+
+            return letter;
+        }
+
+        const isNoteValid = (note) =>{
+            return note >=0 && note <=100 && note;
+        }
+ 
+
+    </script>
+  
+    
+    
+</body>
+</html>

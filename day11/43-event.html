@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+    <style>
+        button{
+            padding: 7px 20px;
+            margin: 10px;
+            font-size: 20px;
+            background-color: rgb(11, 45, 197);
+            border-radius: 10px;
+            cursor: pointer;
+            color: whitesmoke;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Handling</h2>
+
+    <button id="btn1" onclick="sayHello()">Hello</button>
+    <button id="btn2">Hello</button>
+    <button id="btn3">Hello</button>
+    <button id="btn4">Hello</button>
+
+
+    <script>
+
+        //1.yol
+
+        function sayHello(){
+            alert("Hello World");
+        }
+
+        //2.yol
+        let btn2=document.querySelector("#btn2");
+        btn2.onclick=sayHello;
+    
+        //3.yol
+        let btn3=document.querySelector("#btn3");
+        btn3.addEventListener("click",sayHello);
+
+        //Anonymous function ile
+        let btn4=document.querySelector("#btn4");
+        btn4.onclick = () => alert("Hello World");
+
+         // Some other events
+         let btn5 = document.querySelector("#btn5");
+        btn5.addEventListener("copy", function(){
+            this.style.backgroundColor = "coral";
+        });
+
+    </script>
+
+
+    
+</body>
+</html>
