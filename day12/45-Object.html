@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <h2>Objects</h2>
+
+    <script>
+        const car ={
+            name: "Mercedes",
+            model: "C300",
+            color: "White",
+            gear: "Otomatic",
+            engine:{
+                type: "V8",
+                power: 600
+            },
+            start: () => console.log("Car Started")
+        };
+
+        console.log(car);
+        console.log(["engine"]);
+        console.log(Object.keys(car));
+
+    </script>
+    
+</body>
+</html>

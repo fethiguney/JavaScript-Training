@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+</head>
+<body>
+
+    <h2>Array of Objects</h2>
+
+    <script>
+
+        let books =[
+            {
+                id:1,
+                title: "Book 1",
+                author: "Author 1",
+                first_published_year: 2000,
+                genre: "Fantasy",
+                pages: 100
+            },
+            {
+                id:2,
+                title: "Book 2",
+                author: "Author 2",
+                first_published_year: 2001,
+                genre: "Fiction",
+                pages: 200
+            },
+            {
+                id:3,
+                title: "Book 3",
+                author: "Author 3",
+                first_published_year: 2002,
+                genre: "Fiction",
+                pages: 300
+            }
+        ]
+
+
+       console.log(books);     
+
+       for (let i = 0; i < books.length; i++) {
+
+           console.log(books[i].title + " - " + books[i].author);
+       }
+
+
+    </script>
+    
+</body>
+</html>

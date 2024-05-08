@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Mutator Methods</title>
+</head>
+<body>
+
+    <h2>Array Mutator Methods</h2>
+
+    <script>
+         let numbers=[12,56,14,67,89,33,22];
+
+         // 1- push() arrayin sonuna eleman ekler 
+        // ve arrayin yeni eleman sayısını döndürür.
+         numbers.push(65);
+        console.log(numbers); // [12, 56, 14, 67, 89, 33, 22, 65]
+
+        result = numbers.push(15, 105);
+        console.log(numbers); // [12, 56, 14, 67, 89, 33, 22, 65, 15, 105]
+        console.log(result); // 10
+
+
+        // 2- pop() arrayin sonundaki elemanı siler
+        // ve silinen elemanı döndürür
+
+        numbers.pop();
+        console.log(numbers); // [12, 56, 14, 67, 89, 33, 22, 65, 15]
+
+        result = numbers.pop();
+        console.log(result); // 15
+
+
+        // 3- shift() arrayin ilk elemanını siler
+        // ve silinen elemanı döndürür  
+
+        numbers.shift();
+        console.log(numbers); // [56, 14, 67, 89, 33, 22, 65]
+
+        result = numbers.shift();
+        console.log(result); // 56
+
+
+        // 4- unshift() arrayin ilk indeksine eleman ekler
+        // ve arrayin yeni eleman sayısını döndürür.
+
+        numbers.unshift(12);
+        console.log(numbers); // [12, 56, 14, 67, 89, 33, 22, 65]
+
+        result = numbers.unshift(105);
+        console.log(result); // 8
+
+        //5- sort() arrayin elemanlarını alfabetik veya aritmetik olarak sıralar
+
+        numbers.sort();
+        console.log(numbers); // [105, 12, 14, 22, 33, 65, 67, 89]
+
+        numbers.sort(function(x, y){
+            return x-y;
+        })
+
+        numbers.sort((x,y)=>x-y);
+
+        console.log(numbers); //[12, 14, 22, 33, 65, 67, 89, 105]
+
+        var colors=["Blue", "Green", "Red", "Yellow"];
+        colors.sort();
+        console.log(colors); // ["Blue", "Green", "Red", "Yellow"]
+
+        //6- reverse() arrayin elemanlarını tersten sıralar
+
+        numbers.reverse();
+        console.log(numbers); // [105, 89, 67, 65, 33, 22, 14, 12]
+
+        //7- splice() farklı şekillerde kullanılabilir
+        //a-Arrayin belirli bir indeksinden belirli sayıda elemanı siler
+        //ve silinen elemanı döndürur
+
+        result = numbers.splice(6);
+        console.log(numbers); //[105, 89, 67, 65, 33, 22]
+        console.log(result); // [14, 12]
+
+        //b-Belirtilen indeksten itibaren belirtilen sayıda elaman siler
+
+        result = numbers.splice(2, 3);
+        console.log(numbers); //[105, 89, 65, 33, 22]
+        console.log(result); // [67, 65, 33]
+
+        //c-Belirtilen indeksten itibaren belirtilen sayıda elaman siler
+        // ve eklemeler de yapabilir
+
+        result = numbers.splice(2, 3, 100, 200, 300);
+        console.log(numbers); //[105, 89, 100, 200, 300]
+
+
+
+    </script>
+    
+</body>
+</html>

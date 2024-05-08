@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+<body>
+
+    <h2>Array Practice</h2>
+
+    <script>
+
+        let numbers=[12,56,14,67,89,33,22];
+
+        
+        const findMaxNum= (arr) => {
+
+            if (!Array.isArray || arr.length===0) {
+                return;
+            }
+            let max=numbers[0];
+            let min=numbers[0];
+            let sum=0;
+            for (let i=0; i<numbers.length; i++) {
+                if (numbers[i]>max) {
+                    max=numbers[i];
+                }
+
+                if (numbers[i]<min) {
+                    min=numbers[i];
+                }
+
+                sum+=numbers[i];
+            }
+
+            return [min, max, sum];
+        }
+
+        let minAndMaxNum = findMaxNum(numbers);
+        console.log(minAndMaxNum[0]);
+        console.log(minAndMaxNum[1]);
+        console.log(minAndMaxNum[2]);
+
+
+    </script>
+    
+</body>
+</html>
