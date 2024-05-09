@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Practice</title>
+  </head>
+  <body>
+    <h2>Array Practice</h2>
+
+    <script>
+      let numbers = [-5, 15, 22, -4, 45, 78, -25];
+
+        const calculate =(arr) =>{
+
+            let sumOfPositives = 0;
+            let sumOfNegatives = 0;
+
+
+            for(let i=0; i<arr.length; i++){
+
+                if(arr[i]>0){
+
+                    sumOfPositives += arr[i];
+                }else {
+
+                    sumOfNegatives += arr[i];
+                }
+            }
+
+            return (sumOfPositives-sumOfNegatives);
+        }
+
+        let total=calculate(numbers);
+
+        console.log(total);
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

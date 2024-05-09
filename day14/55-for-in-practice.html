@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in practice</title>
+</head>
+<body>
+
+    <h2>For in practice</h2>
+
+    <script>
+
+        const firstNames = ["Ayşe", "Ahmet", "Merve"];
+        const lastNames = ["Çelik", "Kaya", "Demir"];
+
+        const createFullNames = (firstNames, lastNames) => {
+
+            let fullNames = [];
+
+            for (let i in firstNames) {
+
+                fullNames.push(firstNames[i] + " " + lastNames[i]);
+
+            }
+
+            return fullNames;
+        }
+
+        console.log(createFullNames(firstNames, lastNames));
+
+    </script>
+    
+</body>
+</html>
