@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Practice</title>
+</head>
+<body>
+
+    <h2>Filter Practice</h2>
+
+    <script>
+
+        //dizide fiyatı 1000 den az olanları filtrele
+
+        let products = [
+            { id: 1, name: "laptop", price: 3000},
+	        { id: 2, name: "mobile", price: 1000},
+	        { id: 3, name: "watch", price: 500 },
+	        { id: 4, name: "tablet", price: 2000 },
+	        { id: 5, name: "charger", price: 500 }
+             ];
+
+
+
+        let filteredProducts = products.filter((product)=>{
+            return product.price < 1000;
+        });
+        console.log(filteredProducts);
+
+
+
+    </script>
+    
+</body>
+</html>

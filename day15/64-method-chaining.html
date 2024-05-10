@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Chaining</title>
+</head>
+<body>
+
+    <h2>Method Chaining</h2>
+
+    <script>
+
+        //dizideki negatif sayıları pozitif sayıya dönüştürün
+
+        let nums=[-100, 10, 80, -25, 250, 0, -70, 9, -10]
+
+
+        let convertNegatifsToPositives = nums
+        .filter((element) => element<0)
+        .map((element)=> element*-1)
+        .forEach((element)=>console.log(element));
+
+
+    </script>
+    
+</body>
+</html>

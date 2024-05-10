@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Each-Map-Filter</title>
+  </head>
+  <body>
+    <h2>For Each-Map-Filter</h2>
+
+    <script>
+
+      let number = [65, 7, 38, 26];
+
+
+      // For Each
+      number.forEach((num)=>{
+          console.log(num)
+      });
+
+      //Map methodu yeni bir array dondurur
+      let newArr = number.map((num)=>num*2);
+      console.log(newArr);
+
+      //Filter methodu filtreleme yaparak yeni bir array dondurur
+      let newFilter = number.filter((num)=>num>10);
+      console.log(newFilter);
+    </script>
+  </body>
+</html>

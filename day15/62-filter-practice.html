@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Practice</title>
+</head>
+<body>
+
+    <h2>Filter Practice</h2>
+
+    <script>
+
+        //pozitif sayıları filtrele
+
+        let nums = [-100, -50, 0, 50, 100];
+        let newCoordinates = nums.filter((num)=>num>0);
+        console.log(newCoordinates);
+
+        //dizideki kişilerden adı J ile başlayanları filtrele
+
+        let people = [
+            {name:"John", age:23},
+            {name:"jane", age:22},
+            {name:"Smith", age:21},
+            {name:"Kane", age:20}
+        ]
+
+        const newPeople = people.filter((person)=>person.name.startsWith("J") || person.name.startsWith("j"));
+        console.log(newPeople);
+
+    </script>
+    
+</body>
+</html>
