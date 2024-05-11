@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+
+    <h2>Reduce Method</h2>
+
+    <script>
+
+        let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        //foreach ile toplam
+        let sum1 = 0;
+        num.forEach((num)=> sum1+=num);
+
+        //reduce ile toplam
+        let sum = num.reduce((sum,num)=> sum+num,0);
+        console.log(sum);
+
+        //tüm sayıların çarpım sonucunu bulun
+        let numbers=[1,2,3,4,5];
+        let product=numbers.reduce((product,num)=> product*num,1);
+        console.log(product);
+
+        let decimals = [7.5, 1.2, 3.4, 4.8];
+
+        // Eğer ilk değer verirsek total o ilk değeri alır.
+        // Fakat ilk değeri tanımlamazsak total array'in ilk elemanını kendisine ilk değer olarak alır.
+        let sum2 = decimals.reduce((total, num) => total + Math.round(num));
+        console.log(sum2); // 16.5
+
+        let sum3 = decimals.reduce((total, num) => total + Math.round(num), 0);
+        console.log(sum3); // 17
+
+      
+
+    </script>
+    
+</body>
+</html>
