@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            salary: 3000
+
+        };
+
+        const person1=person;
+
+        person1.firstName="Jane";
+
+        console.log(person, person1);
+
+        const person2 = {...person};//shallow copy=Object.assign({},person)
+        person2.firstName="Susan";
+
+        console.log(person, person2);
+
+        const person3 = {...person, firstName : "Carlos"};
+
+        console.log(person, person3);
+        delete person3.salary;//key silme
+        console.log(person3);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest</title>
+</head>
+<body>
+
+    <script>
+
+        const sum = (...nums) => {
+           const total = nums.reduce((t, x)=> t+x, 0);
+           return total;
+        };
+
+        console.log(sum(10,15,20,25,30))
+
+    </script>
+    
+</body>
+</html>

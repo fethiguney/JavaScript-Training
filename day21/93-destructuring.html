@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        const employee = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            departman: "IT",
+            email: "johndoe@test.com",
+            phone: "+156325545455"
+
+        };
+
+        const message1= `${employee.firstName} ${employee.lastName} is ${employee.age} years old. 
+        He works in ${employee.departman}. His email is ${employee.email} 
+        and his phone number is ${employee.phone}.`;
+
+        console.log(message1);
+
+        const {firstName, lastName, age, departman, email, phone}=employee;
+        const message2= `${firstName} ${lastName} is ${age} years old.
+        He works in ${departman}. His email is ${email}
+        and his phone number is ${phone}.`;
+
+        console.log(message2);
+
+
+
+
+    </script>
+</body>
+</html>
