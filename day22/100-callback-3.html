@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <button id="btnDistance">Get Distance</button> 
+        <span id="lblDistance"></span>
+    </div>
+
+    <div>
+        <button id="btnRandom">Get Random Number</button>
+        <span id="lblRandom"></span>
+    </div>
+        
+
+
+    <script>
+
+
+        const btnDistance = document.getElementById("btnDistance");
+        const btnRandom = document.getElementById("btnRandom");
+        const lblDistance = document.getElementById("lblDistance");
+        const lblRandom = document.getElementById("lblRandom");
+
+        const getDistanceFromGoogle = (coord1, coord2, cb) =>{
+            setTimeout ( ()=>{
+
+                const distance = (Math.floor(Math.random() * (coord1-coord2) + coord2)).toFixed(2);
+               
+                cb(distance);
+
+            }, 0);
+
+            
+        }
+
+        btnDistance.addEventListener("click", ()=>{
+            getDistanceFromGoogle(10000, 2000, (distance)=>{
+                lblDistance.textContent = `${distance} km`;
+            });
+
+        })
+
+        btnRandom.addEventListener("click", ()=>{
+            lblRandom.textContent = Math.floor(Math.random() * 10000);
+        })
+
+
+    </script>
+</body>
+</html>
