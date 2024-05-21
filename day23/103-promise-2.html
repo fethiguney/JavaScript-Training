@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <button id="btnDel">Delete</button>
+    
+
+    <script>
+
+
+        //Call back ile cözüm
+       /*  const confirmAsync = (msg, cb) => {
+            setTimeout(()=>{
+                const res = confirm(msg);
+                cb(res);
+            },0);
+        } */
+
+        const confirmAsync = (msg) => new Promise ((resolve)=>{
+            setTimeout(()=>{
+                const res = confirm(msg);
+                resolve(res)
+            },0)
+        })
+        document.getElementById("btnDel").addEventListener("click", ()=>{
+
+             //Call back ile cözüm
+           /*  confirmAsync ("Are you sure to delete this?", (res)=>{
+                if (res) {
+                    console.log("Deleted");
+                }else{
+                    console.log("Cancelled");
+                }
+            });
+            console.log("Hello"); */
+
+            confirmAsync("Are you sure to delete this?").then((res)=>{
+                if (res) {
+                    console.log("Deleted");
+                }else{
+                    console.log("Cancelled");
+                }
+                
+            })
+            console.log("Hello");
+        })
+
+
+    </script>
+</body>
+</html>
